@@ -36,6 +36,7 @@ frame = Frame(ws)
 userInput = Entry(frame, width=40, justify=CENTER)
 userInput.grid(row=0, columnspan=3, padx=5, pady= 10)
 
-Button(frame,text="start",command=lambda: dns_zone_xfer(userInput['text'])).grid(row=1, column=1)
+btn = Button(frame,text="start", command=lambda: dns_zone_xfer(userInput.get())).grid(row=1, column=1)
+
 frame.pack()
 ws.mainloop()
